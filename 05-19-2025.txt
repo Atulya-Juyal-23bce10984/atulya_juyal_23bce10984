@@ -1,0 +1,81 @@
+use vit_bhopal;
+
+
+								# delete, drop, truncate
+create table asd (
+    s_id int,
+    s_name varchar(40),
+    s_marks int
+);
+
+insert into asd
+values 
+    (1, 'mark', 34), 
+    (2, 'rohan', 84), 
+    (3, 'alice', 99), 
+    (4, 'neha', 74);
+
+delete from asd where s_id = 1;
+
+delete from asd;
+
+insert into asd 
+values 
+    (1, 'mark', 34), 
+    (2, 'rohan', 84), 
+    (3, 'alice', 99), 
+    (4, 'neha', 74);
+
+truncate table asd;
+
+insert into asd 
+values 
+    (1, 'mark', 34), 
+    (2, 'rohan', 84);
+
+drop table asd;
+
+
+
+create table asd (
+    s_id int,
+    s_name varchar(40),
+    s_marks int
+);
+
+insert into asd
+values 
+    (1, 'mark', 34), 
+    (2, 'rohan', 84), 
+    (3, 'alice', 99), 
+    (4, 'neha', 74);
+    
+select s_name as passed from asd where s_marks > 35;
+
+
+
+create table cse (
+    s_id int,
+    s_name varchar(40),
+    s_marks int
+);
+
+insert into cse 
+values 
+    (1, 'mark', 34), 
+    (2, 'rohan', 84), 
+    (3, 'alice', 99), 
+    (4, 'neha', 74), 
+    (5, 'john', 55), 
+    (6, 'sara', 34);
+
+select * from cse where s_marks > 50 and s_marks < 90;
+
+select * from cse where s_name = 'alice' or s_marks < 40;
+
+delete from cse where s_marks < 40 and s_name = 'mark';
+
+delete from cse where s_marks > 80 or s_name = 'neha';
+
+select * from cse;
+
